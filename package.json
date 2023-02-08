@@ -3,7 +3,7 @@
     "cz-git": "^1.4.1"
   },
   "scripts": {
-    "commit": "cz"
+    "commit": "cz -S"
   },
   "config": {
     "commitizen": {

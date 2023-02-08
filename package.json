@@ -1,18 +1,72 @@
 {
-  "devDependencies": {
-    "cz-git": "^1.4.1"
+  "name": "@scottleung/physical-engine",
+  "version": "0.1.0",
+  "description": "组件功能描述",
+  "files": [
+    "esm",
+    "es2017",
+    "cjs",
+    "dist"
+  ],
+  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "exports": {
+    ".": {
+      "es2017": {
+        "types": "./es2017/index.d.ts",
+        "default": "./es2017/index.js"
+      },
+      "default": {
+        "types": "./esm/index.d.ts",
+        "default": "./esm/index.js"
+      }
+    },
+    "./*": "./*"
   },
+  "sideEffects": [
+    "dist/*",
+    "*.scss",
+    "*.less",
+    "*.css"
+  ],
   "scripts": {
-    "commit": "cz -S"
+    "start": "ice-pkg start",
+    "build": "ice-pkg build",
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "lint": "npm run eslint && npm run stylelint",
+    "commit": "git cz"
   },
+  "keywords": [
+    "ice",
+    "react",
+    "component"
+  ],
+  "devDependencies": {
+    "@ice/pkg": "^1.0.0",
+    "@ice/pkg-plugin-docusaurus": "^1.0.0",
+    "@iceworks/spec": "^1.0.0",
+    "eslint": "^7.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "stylelint": "^13.7.2"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git",
       "czConfig": ".commitlintrc.js"
     }
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

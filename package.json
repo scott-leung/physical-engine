@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "cz-git": "^1.4.1"
+  },
+  "scripts": {
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": ".commitlintrc.js"
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

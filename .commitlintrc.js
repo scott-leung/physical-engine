@@ -30,6 +30,7 @@ module.exports = {
       { value: 'ci', name: 'ci:       持续集成 | Changes to our CI configuration files and scripts' },
       { value: 'revert', name: 'revert:   回退代码 | Revert to a commit' },
       { value: 'chore', name: 'chore:    其他修改 | Other changes that do not modify src or test files' },
+      { value: 'release', name: 'release:  发布版本 | Relase version' },
     ],
     useEmoji: false,
     emojiAlign: 'center',

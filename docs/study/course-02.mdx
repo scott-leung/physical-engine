@@ -1,12 +1,11 @@
 ---
-sidebar_label: 物理引擎学习01 - 初识引擎
+sidebar_label: 物理引擎学习02 - 初识引擎
 sidebar_position: 1
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # 初识引擎
 
-<img src={useBaseUrl('/svg/matter-js.svg')} height="100" />
+<img src="/svg/matter-js.svg" height="100" />
 
 先来简单地了解一下物理引擎。
 
@@ -20,12 +19,38 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## 简单拆分物理引擎
 
-拆分的规则是根据源码中作者对整个 `Matter` 的模块拆分而来的，这样我觉得可以从作者的角度来看，不至于让自己走错路吧？应该？
+拆分的规则一开始我是想根据源码中作者对整个 `Matter` 的模块拆分而来的，这样我觉得可以从作者的角度来看，应该不至于让自己走错路吧？
+
+从大体上来看是可以，但是有些细分还是要参考些前人总结的经验和文章来拆。
 
 ### 引擎（Engine）
+```tsx preview
+import { Course02 } from '@scottleung/physical-engine';
 
-### 世界
+export default function App () {
+  return (
+    <Course02.EngineSample />
+  )
+}
+```
+### 世界（World）
 
-### 刚体
+### 刚体（Body）
+
+### 复合体（Composite）
+
+### 碰撞（Collision）
+
+### 约束（Constraint）
+
+### 事件（Events）
+
+### 渲染器（Render）
+
+### 运行器（Runner）
+
+### 休眠（Sleeping） - 非必须
+
+### 鼠标（Mouse） - 非必须
 
 ## 一个简单的 DEMO

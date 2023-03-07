@@ -13,3 +13,5 @@ export default function PhysicalEngine(props: ComponentProps) {
     <div className={styles.PhysicalEngine}>{title}</div>
   );
 }
+
+export * from './study';

@@ -49,6 +49,7 @@
     "@ice/pkg": "^1.0.0",
     "@ice/pkg-plugin-docusaurus": "^1.0.0",
     "@iceworks/spec": "^1.0.0",
+    "@types/matter-js": "^0.18.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "cz-git": "^1.4.1",
@@ -69,5 +70,10 @@
       "path": "node_modules/cz-git",
       "czConfig": ".commitlintrc.js"
     }
+  },
+  "dependencies": {
+    "@ice/jsx-runtime": "^0.2.0",
+    "@swc/helpers": "^0.4.14",
+    "matter-js": "^0.18.0"
   }
 }

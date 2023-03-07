@@ -1,1 +1,1 @@
-export * from './Course02';
+export * from './ResetLayout';
